@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on 352 Game Hub</title>
-    <link>https://talsulin.github.io/</link>
-    <description>Recent content in Blog on 352 Game Hub</description>
+    <title>Posts on 352 Game Hub</title>
+    <link>https://talsulin.github.io/post/</link>
+    <description>Recent content in Posts on 352 Game Hub</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Feb 2019 13:50:01 -0600</lastBuildDate><atom:link href="https://talsulin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Feb 2019 13:50:01 -0600</lastBuildDate><atom:link href="https://talsulin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a New Theme</title>
       <link>https://talsulin.github.io/creating-a-new-theme/</link>
@@ -46,17 +46,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Headings # Heading 1## Heading 2### Heading 3#### Heading 4##### Heading 5###### Heading 6 Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic*_This will also be italic_**This text will be bold**__This will also be bold___You **can** combine them_ This text will be italic
 This will also be italic
 This text will be bold</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://talsulin.github.io/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://talsulin.github.io/about/</guid>
-      <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
-It makes use of a variety of open source projects including:
-https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper Learn more and contribute on GitHub.</description>
     </item>
     
     <item>
