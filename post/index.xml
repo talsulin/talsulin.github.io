@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 352 Game Hub</title>
+    <title>Posts on 352 Learning Hub</title>
     <link>https://talsulin.github.io/post/</link>
-    <description>Recent content in Posts on 352 Game Hub</description>
+    <description>Recent content in Posts on 352 Learning Hub</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Feb 2019 13:50:01 -0600</lastBuildDate><atom:link href="https://talsulin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 13:50:01 -0600</lastBuildDate><atom:link href="https://talsulin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a New Theme</title>
       <link>https://talsulin.github.io/creating-a-new-theme/</link>
@@ -29,18 +29,9 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>Papercss Shortcodes</title>
-      <link>https://talsulin.github.io/papercss-shortcodes/</link>
-      <pubDate>Tue, 26 Feb 2019 13:50:01 -0600</pubDate>
-      
-      <guid>https://talsulin.github.io/papercss-shortcodes/</guid>
-      <description>collapsible {{&amp;lt; collapsible &amp;quot;First&amp;quot; &amp;gt;}}Bacon ipsum dolor sit amet beef venison beef ribs kielbasa.{{&amp;lt; /collapsible &amp;gt;}}{{&amp;lt; collapsible &amp;quot;Second&amp;quot; &amp;gt;}}Bacon ipsum dolor sit amet landjaeger sausage brisket.{{&amp;lt; /collapsible &amp;gt;}}FirstBacon ipsum dolor sit amet beef venison beef ribs kielbasa.SecondBacon ipsum dolor sit amet landjaeger sausage brisket.border {{&amp;lt; border &amp;gt;}}Regular{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dashed&amp;quot; &amp;gt;}}Dashed{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dotted&amp;quot; &amp;gt;}}Dotted{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dashed thick&amp;quot; &amp;gt;}}Dashed Thick{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dotted thick&amp;quot; &amp;gt;}}Dotted Thick{{&amp;lt; /border &amp;gt;}}RegularDashedDottedDashed ThickDotted Thickcolor {{&amp;lt; color &amp;quot;primary&amp;quot; &amp;gt;}}Text primary{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;secondary&amp;quot; &amp;gt;}}Text secondary{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;success&amp;quot; &amp;gt;}}Text success{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;warning&amp;quot; &amp;gt;}}Text warning{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;danger&amp;quot; &amp;gt;}}Text danger{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;muted&amp;quot; &amp;gt;}}Text muted{{&amp;lt; /color &amp;gt;}}Text primaryText secondaryText successText warningText dangerText mutedbackground {{&amp;lt; background &amp;quot;primary&amp;quot; &amp;gt;}}Background primary{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;secondary&amp;quot; &amp;gt;}}Background secondary{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;success&amp;quot; &amp;gt;}}Background success{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;warning&amp;quot; &amp;gt;}}Background warning{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;danger&amp;quot; &amp;gt;}}Background danger{{&amp;lt; /background &amp;gt;}}Background primaryBackground secondaryBackground successBackground warningBackground dangeralert {{&amp;lt; alert &amp;quot;primary&amp;quot; &amp;gt;}}Alert-primary{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;secondary&amp;quot; &amp;gt;}}Alert-secondary{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;success&amp;quot; &amp;gt;}}Alert-success{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;warning&amp;quot; &amp;gt;}}Alert-warning{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;danger&amp;quot; &amp;gt;}}Alert-danger{{&amp;lt; /alert &amp;gt;}}Alert-primaryAlert-secondaryAlert-successAlert-warningAlert-dangerbadge &amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;secondary&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;success&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;warning&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;danger&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;Example badge 123Example badge 123Example badge 123Example badge 123Example badge 123card The img param accepts an image page resource name.</description>
-    </item>
-    
-    <item>
       <title>Texas Hold&#39;em</title>
       <link>https://talsulin.github.io/texas-holdem/</link>
-      <pubDate>Tue, 26 Feb 2019 13:50:01 -0600</pubDate>
+      <pubDate>Mon, 13 Mar 2023 13:50:01 -0600</pubDate>
       
       <guid>https://talsulin.github.io/texas-holdem/</guid>
       <description>德州扑克规则与玩法 V1.1 座位图 荷官庄家位置的确定 第一个按钮庄家的位置是荷官（发牌的人）将牌一张一张地分发给玩家，拿到最强牌的人确定为庄家位。 确定按钮庄家位的玩家后，就开始正式发牌。
@@ -50,6 +41,24 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
 转牌&amp;amp;河牌 Turn—发第四张牌，由小盲注开始，按照顺时针方向依次表态。River—发第五张牌，由小盲注开始，按照顺时针方向依次表态，玩家可以选择下注、加注、或者盖牌放弃。 经过前面四轮发牌和下注，还剩余2名以上的玩家时，开始比大小，这时候需要亮牌。
 亮牌 剩余2名以上的玩家开始亮牌比大小，成牌最大的玩家赢取池底。 亮牌是用自己的2张底牌和5张公共牌结合在一起，选出5张牌，通过比大小决定胜者。 不论手中的牌使用几张（甚至可以不用手中的底牌），凑成最大的成牌，跟其他玩家比大小。
 牌型大小 All-in 玩家全押只能赢取自己筹码量那部分筹码， 例如，玩家1在转牌下注$50，而玩家2仅剩$35， 如果玩家2跟注，则将玩家1下注的$50中拿出$35放入底池的”主池”(main pot)中，而剩余的$15将分两种情况: (a)如果是玩家1与玩家2两个人单挑，则将$15返还给玩家1; (b)将$15放入“边池”(side pot)，未弃牌且还有筹码的玩家将争夺边池中的筹码。全押后，玩家2无法从边池中赢得任何筹码。 如果两名玩家单挑，其中一名全押，另一名玩家跟注或全押，将省略之后的下注回合 ，直接发完5张牌然后摊牌比大小。现金局中，这种情况也可以提前摊牌，然后2名玩家协商发多次(run it twice)来降低波动；这种情况必须是2名玩家的全押，必须2人都同意发多次(一般2-5次)，从全押的时刻开始，把剩余的公共牌发出多次，按赢的次数比例分底池。</description>
+    </item>
+    
+    <item>
+      <title>Table of contents for dissertations </title>
+      <link>https://talsulin.github.io/table-of-contents-for-dissertations/</link>
+      <pubDate>Mon, 13 Mar 2023 13:00:00 -0600</pubDate>
+      
+      <guid>https://talsulin.github.io/table-of-contents-for-dissertations/</guid>
+      <description>基于蓝牙5的AoA估计方法及应用研究 目录 第一章 绪论  研究背景及意义 AoA角度估计现状  基于非蓝牙的方法 基于蓝牙的方法   研究内容及贡献 论文组织结构  第二章 基于蓝牙的AoA角度估计相关工作  蓝牙AoA工作原理 典型的AoA的角度估计方法  理想模型 波束成形方法 基于子空间的方法    第三章 基于蓝牙AoA的角度估计算法  数据预处理 传统AoA算法 神经网络模型  第四章 实验验证与分析  数据采集 实验设置 性能分析  第五章 角度估计系统的设计与实现  系统需求分析 系统开发环境及相关技术 系统架构设计 系统功能实现  第六章 总结与展望  总结 展望  </description>
+    </item>
+    
+    <item>
+      <title>Papercss Shortcodes</title>
+      <link>https://talsulin.github.io/papercss-shortcodes/</link>
+      <pubDate>Fri, 13 Mar 2020 13:50:01 -0600</pubDate>
+      
+      <guid>https://talsulin.github.io/papercss-shortcodes/</guid>
+      <description>collapsible {{&amp;lt; collapsible &amp;quot;First&amp;quot; &amp;gt;}}Bacon ipsum dolor sit amet beef venison beef ribs kielbasa.{{&amp;lt; /collapsible &amp;gt;}}{{&amp;lt; collapsible &amp;quot;Second&amp;quot; &amp;gt;}}Bacon ipsum dolor sit amet landjaeger sausage brisket.{{&amp;lt; /collapsible &amp;gt;}}FirstBacon ipsum dolor sit amet beef venison beef ribs kielbasa.SecondBacon ipsum dolor sit amet landjaeger sausage brisket.border {{&amp;lt; border &amp;gt;}}Regular{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dashed&amp;quot; &amp;gt;}}Dashed{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dotted&amp;quot; &amp;gt;}}Dotted{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dashed thick&amp;quot; &amp;gt;}}Dashed Thick{{&amp;lt; /border &amp;gt;}}{{&amp;lt; border &amp;quot;dotted thick&amp;quot; &amp;gt;}}Dotted Thick{{&amp;lt; /border &amp;gt;}}RegularDashedDottedDashed ThickDotted Thickcolor {{&amp;lt; color &amp;quot;primary&amp;quot; &amp;gt;}}Text primary{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;secondary&amp;quot; &amp;gt;}}Text secondary{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;success&amp;quot; &amp;gt;}}Text success{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;warning&amp;quot; &amp;gt;}}Text warning{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;danger&amp;quot; &amp;gt;}}Text danger{{&amp;lt; /color &amp;gt;}}{{&amp;lt; color &amp;quot;muted&amp;quot; &amp;gt;}}Text muted{{&amp;lt; /color &amp;gt;}}Text primaryText secondaryText successText warningText dangerText mutedbackground {{&amp;lt; background &amp;quot;primary&amp;quot; &amp;gt;}}Background primary{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;secondary&amp;quot; &amp;gt;}}Background secondary{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;success&amp;quot; &amp;gt;}}Background success{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;warning&amp;quot; &amp;gt;}}Background warning{{&amp;lt; /background &amp;gt;}}{{&amp;lt; background &amp;quot;danger&amp;quot; &amp;gt;}}Background danger{{&amp;lt; /background &amp;gt;}}Background primaryBackground secondaryBackground successBackground warningBackground dangeralert {{&amp;lt; alert &amp;quot;primary&amp;quot; &amp;gt;}}Alert-primary{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;secondary&amp;quot; &amp;gt;}}Alert-secondary{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;success&amp;quot; &amp;gt;}}Alert-success{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;warning&amp;quot; &amp;gt;}}Alert-warning{{&amp;lt; /alert &amp;gt;}}{{&amp;lt; alert &amp;quot;danger&amp;quot; &amp;gt;}}Alert-danger{{&amp;lt; /alert &amp;gt;}}Alert-primaryAlert-secondaryAlert-successAlert-warningAlert-dangerbadge &amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;secondary&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;success&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;warning&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;&amp;lt;h3&amp;gt;Example badge {{&amp;lt; badge &amp;quot;danger&amp;quot; &amp;gt;}}123{{&amp;lt; /badge &amp;gt;}}&amp;lt;/h3&amp;gt;Example badge 123Example badge 123Example badge 123Example badge 123Example badge 123card The img param accepts an image page resource name.</description>
     </item>
     
     <item>

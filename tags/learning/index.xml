@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on 352 Learning Hub</title>
+    <link>https://talsulin.github.io/tags/learning/</link>
+    <description>Recent content in learning on 352 Learning Hub</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Mar 2023 13:00:00 -0600</lastBuildDate><atom:link href="https://talsulin.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Table of contents for dissertations </title>
+      <link>https://talsulin.github.io/table-of-contents-for-dissertations/</link>
+      <pubDate>Mon, 13 Mar 2023 13:00:00 -0600</pubDate>
+      
+      <guid>https://talsulin.github.io/table-of-contents-for-dissertations/</guid>
+      <description>基于蓝牙5的AoA估计方法及应用研究 目录 第一章 绪论  研究背景及意义 AoA角度估计现状  基于非蓝牙的方法 基于蓝牙的方法   研究内容及贡献 论文组织结构  第二章 基于蓝牙的AoA角度估计相关工作  蓝牙AoA工作原理 典型的AoA的角度估计方法  理想模型 波束成形方法 基于子空间的方法    第三章 基于蓝牙AoA的角度估计算法  数据预处理 传统AoA算法 神经网络模型  第四章 实验验证与分析  数据采集 实验设置 性能分析  第五章 角度估计系统的设计与实现  系统需求分析 系统开发环境及相关技术 系统架构设计 系统功能实现  第六章 总结与展望  总结 展望  </description>
+    </item>
+    
+  </channel>
+</rss>
