@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="generator" content="Hugo 0.92.2" />
+  <link rel="canonical" href="https://talsulin.github.io/macos-command/">
+
+  
+    
+    <meta name="description" content="macOS terminal command WSL&amp;Clash create ~/.proxy file touch ~/.proxy adding codes in ~/.proxy file #!/bin/bash hostip=$(cat /etc/resolv.conf |grep -oP &#39;(?&lt;=nameserver\ ).*&#39;) export https_proxy=&#34;http://${hostip}:7890&#34; export http_proxy=&#34;http://${hostip}:7890&#34; export all_proxy=&#34;socks5://${hostip}:7890&#34; edit .zshrc or .bashrc file source ~/.proxy Building terminal install oh-my-zsh sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34; install powerlevel10k git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k Set ZSH_THEME=&#34;powerlevel10k/powerlevel10k&#34; in ~/.zshrc.
+install powerlevel10k plugins install zsh-autosuggestions git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions install zsh-syntax-highlighting git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting install zsh-z git clone https://github.">
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="text/css" href="/css/paper.css">
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/custom.css">
+  
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123456789-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  
+  <title>macOS terminal command | 352 Learning Hub</title>
+</head>
+
+  <body>
+    <div class="container paper">
+      <nav class="border split-nav">
+  <div class="nav-brand">
+    <h3><a href="/">352 Learning Hub</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+    <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+      
+        <li><a href="/">Blog</a></li>
+      
+        <li><a href="/tags/">Tags</a></li>
+      
+        <li><a href="/about/">About</a></li>
+      
+        <li><a href="/index.xml">RSS</a></li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+      <main>
+        
+
+<h1 class="post-title">macOS terminal command</h1>
+
+
+<strong>Publish date: </strong>Mar 16, 2023
+<br>
+
+  <strong>Tags: </strong>
+  
+    <a href="/tags/learning">learning</a>
+  
+    <a href="/tags/tutorial">tutorial</a>
+  
+
+
+
+  
+
+<div class="child-borders">
+  <div class="toc border" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#wslclash">
+            WSL&amp;Clash
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#building-terminal">
+            Building terminal
+          </a>
+        </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#silicon">
+            Silicon
+          </a>
+        </li>
+      
+    </ol>
+  </div>
+</div>
+
+
+
+<h1 id="macos-terminal-command">macOS terminal command</h1>
+<h2 id="wslclash">WSL&amp;Clash</h2>
+<h3 id="create-proxy-file">create <code>~/.proxy</code> file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">touch ~/.proxy
+</code></pre></div><h3 id="adding-codes-in-proxy-file">adding codes in <code>~/.proxy</code> file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>hostip<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /etc/resolv.conf |grep -oP <span style="color:#e6db74">&#39;(?&lt;=nameserver\ ).*&#39;</span><span style="color:#66d9ef">)</span>
+export https_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
+export http_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
+export all_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;socks5://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
+</code></pre></div><h3 id="edit-zshrc-or-bashrc-file">edit <code>.zshrc</code> or <code>.bashrc</code> file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.proxy
+</code></pre></div><h2 id="building-terminal">Building terminal</h2>
+<h3 id="install-oh-my-zsh">install oh-my-zsh</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><h3 id="install-powerlevel10k">install powerlevel10k</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://github.com/romkatv/powerlevel10k.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>$HOME/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/themes/powerlevel10k
+</code></pre></div><p>Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
+<h3 id="install-powerlevel10k-plugins">install powerlevel10k plugins</h3>
+<h4 id="install-zsh-autosuggestions">install zsh-autosuggestions</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/zsh-users/zsh-autosuggestions <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-autosuggestions
+</code></pre></div><h4 id="install-zsh-syntax-highlighting">install zsh-syntax-highlighting</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-syntax-highlighting
+</code></pre></div><h4 id="install-zsh-z">install zsh-z</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/agkozak/zsh-z <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-z
+</code></pre></div><h4 id="adding-plugins-array-in-zshrc">adding plugins array in <code>.zshrc</code></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">plugins<span style="color:#f92672">=(</span>
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  zsh-z
+<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="silicon">Silicon</h2>
+<h3 id="show-com-devices">show COM devices</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ls /dev/tty.*
+<span style="color:#75715e">#also ls /dev/cu.*</span>
+</code></pre></div><h3 id="run-exe-file">run exe file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/Users/sulin/Desktop/ula1x4rtb -u /dev/cu.usbmodem0004401671811 | tee ~/Desktop/out.txt
+<span style="color:#75715e">#file_path COM_port | output_file</span>
+</code></pre></div>
+
+
+
+      </main>
+  </div>
+  </body>
+</html>
