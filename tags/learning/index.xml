@@ -23,7 +23,7 @@ install powerlevel10k plugins install zsh-autosuggestions git clone https://gith
       <pubDate>Mon, 13 Mar 2023 13:00:00 -0600</pubDate>
       
       <guid>https://talsulin.github.io/table-of-contents-for-dissertations/</guid>
-      <description>基于蓝牙5的AoA估计方法及应用研究 目录 第一章 绪论  研究背景及意义 AoA角度估计现状  基于非蓝牙的方法 基于蓝牙的方法   研究内容及贡献 论文组织结构  第二章 基于蓝牙的AoA角度估计相关工作  蓝牙AoA工作原理 典型的AoA的角度估计方法  理想模型 波束成形方法 基于子空间的方法    第三章 基于蓝牙AoA的角度估计算法  数据预处理 传统AoA算法 神经网络模型  第四章 实验验证与分析  数据采集 实验设置 性能分析  第五章 角度估计系统的设计与实现  系统需求分析 系统开发环境及相关技术 系统架构设计 系统功能实现  第六章 总结与展望  总结 展望  </description>
+      <description>基于蓝牙5的AoA估计方法及应用研究 目录 第一章 绪论 研究背景及意义 AoA角度估计现状 基于非蓝牙的方法 基于蓝牙的方法 研究内容及贡献 论文组织结构 第二章 基于蓝牙的AoA角度估计 相关工作 done蓝牙AoA工作原理 典型的AoA的角度估计方法 done理想模型 done波束成形方法 writing基于子空间的方法 第三章 基于蓝牙的AoA的角度估计算法 数据预处理 传统AoA算法 基于神经网络模型的AoA估计算法 第四章 实验验证与分析 数据采集 实验设置 实验设置 数据采集 实验验证 性能分析 第五章 角度估计系统的设计与实现 系统需求分析 系统开发环境及相关技术 系统开发环境及相关技术 系统需求分析 系统架构设计 系统测试 系统功能实现 第六章 总结与展望 总结 展望 </description>
     </item>
     
   </channel>
