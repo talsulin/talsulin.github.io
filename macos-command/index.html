@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="generator" content="Hugo 0.111.3">
   <link rel="canonical" href="https://talsulin.github.io/macos-command/">
 
   
@@ -141,56 +141,60 @@ if (!doNotTrack) {
 
 <h2 id="wslclash">WSL&amp;Clash</h2>
 <h3 id="create-proxy-file">create <code>~/.proxy</code> file</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">touch ~/.proxy
-</code></pre></div><h3 id="adding-codes-in-proxy-file">adding codes in <code>~/.proxy</code> file</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>hostip<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /etc/resolv.conf |grep -oP <span style="color:#e6db74">&#39;(?&lt;=nameserver\ ).*&#39;</span><span style="color:#66d9ef">)</span>
-export https_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
-export http_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
-export all_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;socks5://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
-</code></pre></div><h3 id="edit-zshrc-or-bashrc-file">edit <code>.zshrc</code> or <code>.bashrc</code> file</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.proxy
-</code></pre></div><h3 id="conda--cudatoolkit--cudnn--pytorch">conda &amp; cudatoolkit &amp; cudnn &amp; pytorch</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#conda</span>
-curl -L -O <span style="color:#e6db74">&#34;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-</span><span style="color:#66d9ef">$(</span>uname<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">.sh&#34;</span>
-bash Mambaforge-<span style="color:#66d9ef">$(</span>uname<span style="color:#66d9ef">)</span>-<span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span>.sh
-<span style="color:#75715e">#cudatoolkit</span>
-wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
-sudo dpkg -i cuda-keyring_1.0-1_all.deb
-sudo apt-get update
-sudo apt-get -y install cuda
-<span style="color:#75715e">#cudnn</span>
-sudo apt install nvidia-cudnn  
-<span style="color:#75715e">#pytorch</span>
-conda install pytorch torchvision torchaudio pytorch-cuda<span style="color:#f92672">=</span>11.7 -c pytorch -c nvidia  
-</code></pre></div><h2 id="building-terminal">Building terminal</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>touch ~/.proxy
+</span></span></code></pre></div><h3 id="adding-codes-in-proxy-file">adding codes in <code>~/.proxy</code> file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>hostip<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /etc/resolv.conf |grep -oP <span style="color:#e6db74">&#39;(?&lt;=nameserver\ ).*&#39;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>export https_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
+</span></span><span style="display:flex;"><span>export http_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
+</span></span><span style="display:flex;"><span>export all_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;socks5://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
+</span></span></code></pre></div><h3 id="edit-zshrc-or-bashrc-file">edit <code>.zshrc</code> or <code>.bashrc</code> file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source ~/.proxy
+</span></span></code></pre></div><h3 id="conda--cudatoolkit--cudnn--pytorch">conda &amp; cudatoolkit &amp; cudnn &amp; pytorch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#conda</span>
+</span></span><span style="display:flex;"><span>curl -L -O <span style="color:#e6db74">&#34;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-</span><span style="color:#66d9ef">$(</span>uname<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">.sh&#34;</span>
+</span></span><span style="display:flex;"><span>bash Mambaforge-<span style="color:#66d9ef">$(</span>uname<span style="color:#66d9ef">)</span>-<span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span>.sh
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cudatoolkit</span>
+</span></span><span style="display:flex;"><span>wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i cuda-keyring_1.0-1_all.deb
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get -y install cuda
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cudnn</span>
+</span></span><span style="display:flex;"><span>sudo apt install nvidia-cudnn  
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pytorch</span>
+</span></span><span style="display:flex;"><span>conda install pytorch torchvision torchaudio pytorch-cuda<span style="color:#f92672">=</span>11.7 -c pytorch -c nvidia  
+</span></span></code></pre></div><h3 id="ssh">ssh</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd .ssh
+</span></span><span style="display:flex;"><span>ssh-keygen
+</span></span><span style="display:flex;"><span>cat id_rsa.pub | ssh XX@111.111.11.111 <span style="color:#e6db74">&#39;cat &gt;&gt;.ssh/authorized_keys&#39;</span>
+</span></span></code></pre></div><h2 id="building-terminal">Building terminal</h2>
 <h3 id="install-oh-my-zsh">install oh-my-zsh</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><h3 id="install-powerlevel10k">install powerlevel10k</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://github.com/romkatv/powerlevel10k.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>$HOME/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/themes/powerlevel10k
-</code></pre></div><p>Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h3 id="install-powerlevel10k">install powerlevel10k</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://github.com/romkatv/powerlevel10k.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>$HOME/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/themes/powerlevel10k
+</span></span></code></pre></div><p>Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
 <h3 id="install-powerlevel10k-plugins">install powerlevel10k plugins</h3>
 <h4 id="install-zsh-autosuggestions">install zsh-autosuggestions</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/zsh-users/zsh-autosuggestions <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-autosuggestions
-</code></pre></div><h4 id="install-zsh-syntax-highlighting">install zsh-syntax-highlighting</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-syntax-highlighting
-</code></pre></div><h4 id="install-zsh-z">install zsh-z</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/agkozak/zsh-z <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-z
-</code></pre></div><h4 id="adding-plugins-array-in-zshrc">adding plugins array in <code>.zshrc</code></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">plugins<span style="color:#f92672">=(</span>
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-z
-<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="silicon">Silicon</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/zsh-users/zsh-autosuggestions <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-autosuggestions
+</span></span></code></pre></div><h4 id="install-zsh-syntax-highlighting">install zsh-syntax-highlighting</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-syntax-highlighting
+</span></span></code></pre></div><h4 id="install-zsh-z">install zsh-z</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/agkozak/zsh-z <span style="color:#e6db74">${</span>ZSH_CUSTOM<span style="color:#66d9ef">:-</span>~/.oh-my-zsh/custom<span style="color:#e6db74">}</span>/plugins/zsh-z
+</span></span></code></pre></div><h4 id="adding-plugins-array-in-zshrc">adding plugins array in <code>.zshrc</code></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>plugins<span style="color:#f92672">=(</span>
+</span></span><span style="display:flex;"><span>  git
+</span></span><span style="display:flex;"><span>  zsh-autosuggestions
+</span></span><span style="display:flex;"><span>  zsh-syntax-highlighting
+</span></span><span style="display:flex;"><span>  zsh-z
+</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="silicon">Silicon</h2>
 <h3 id="show-com-devices">show COM devices</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ls /dev/tty.*
-<span style="color:#75715e">#also ls /dev/cu.*</span>
-</code></pre></div><h3 id="run-exe-file">run exe file</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/Users/sulin/Desktop/ula1x4rtb -u /dev/cu.usbmodem0004401671811 | tee ~/Desktop/out.txt
-<span style="color:#75715e">#file_path COM_port | output_file</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ls /dev/tty.*
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#also ls /dev/cu.*</span>
+</span></span></code></pre></div><h3 id="run-exe-file">run exe file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/Users/sulin/Desktop/ula1x4rtb -u /dev/cu.usbmodem0004401671811 | tee ~/Desktop/out.txt
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#file_path COM_port | output_file</span>
+</span></span></code></pre></div>
 
 
 

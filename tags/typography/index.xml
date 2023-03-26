@@ -13,7 +13,7 @@
       <pubDate>Fri, 22 Feb 2019 20:53:58 -0600</pubDate>
       
       <guid>https://talsulin.github.io/papercss-typography/</guid>
-      <description>Headings # Heading 1## Heading 2### Heading 3#### Heading 4##### Heading 5###### Heading 6Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic*_This will also be italic_**This text will be bold**__This will also be bold___You **can** combine them_This text will be italic
+      <description>Headings # Heading 1## Heading 2### Heading 3#### Heading 4##### Heading 5###### Heading 6 Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic*_This will also be italic_**This text will be bold**__This will also be bold___You **can** combine them_ This text will be italic
 This will also be italic
 This text will be bold</description>
     </item>
