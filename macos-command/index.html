@@ -10,7 +10,7 @@
 
   
     
-    <meta name="description" content="macOS terminal command WSL&amp;Clash create ~/.proxy file touch ~/.proxy adding codes in ~/.proxy file #!/bin/bash hostip=$(cat /etc/resolv.conf |grep -oP &#39;(?&lt;=nameserver\ ).*&#39;) export https_proxy=&#34;http://${hostip}:7890&#34; export http_proxy=&#34;http://${hostip}:7890&#34; export all_proxy=&#34;socks5://${hostip}:7890&#34; edit .zshrc or .bashrc file source ~/.proxy cudatoolkit &amp; cudnn &amp; pytorch #cudatoolkit wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb sudo dpkg -i cuda-keyring_1.0-1_all.deb sudo apt-get update sudo apt-get -y install cuda #cudnn sudo apt install nvidia-cudnn #pytorch conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia Building terminal install oh-my-zsh sh -c &#34;$(curl -fsSL https://raw.">
+    <meta name="description" content="WSL&amp;Clash create ~/.proxy file touch ~/.proxy adding codes in ~/.proxy file #!/bin/bash hostip=$(cat /etc/resolv.conf |grep -oP &#39;(?&lt;=nameserver\ ).*&#39;) export https_proxy=&#34;http://${hostip}:7890&#34; export http_proxy=&#34;http://${hostip}:7890&#34; export all_proxy=&#34;socks5://${hostip}:7890&#34; edit .zshrc or .bashrc file source ~/.proxy conda &amp; cudatoolkit &amp; cudnn &amp; pytorch #conda curl -L -O &#34;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh&#34; bash Mambaforge-$(uname)-$(uname -m).sh #cudatoolkit wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb sudo dpkg -i cuda-keyring_1.0-1_all.deb sudo apt-get update sudo apt-get -y install cuda #cudnn sudo apt install nvidia-cudnn #pytorch conda install pytorch torchvision torchaudio pytorch-cuda=11.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -45,7 +45,7 @@ if (!doNotTrack) {
 
   
   
-  <title>macOS terminal command | 352 Learning Hub</title>
+  <title>terminal command | 352 Learning Hub</title>
 </head>
 
   <body>
@@ -81,7 +81,7 @@ if (!doNotTrack) {
       <main>
         
 
-<h1 class="post-title">macOS terminal command</h1>
+<h1 class="post-title">terminal command</h1>
 
 
 <strong>Publish date: </strong>Mar 16, 2023
@@ -139,7 +139,6 @@ if (!doNotTrack) {
 
 
 
-<h1 id="macos-terminal-command">macOS terminal command</h1>
 <h2 id="wslclash">WSL&amp;Clash</h2>
 <h3 id="create-proxy-file">create <code>~/.proxy</code> file</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">touch ~/.proxy
@@ -151,8 +150,11 @@ export http_proxy<span style="color:#f92672">=</span><span style="color:#e6db74"
 export all_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;socks5://</span><span style="color:#e6db74">${</span>hostip<span style="color:#e6db74">}</span><span style="color:#e6db74">:7890&#34;</span>
 </code></pre></div><h3 id="edit-zshrc-or-bashrc-file">edit <code>.zshrc</code> or <code>.bashrc</code> file</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.proxy
-</code></pre></div><h3 id="cudatoolkit--cudnn--pytorch">cudatoolkit &amp; cudnn &amp; pytorch</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#cudatoolkit</span>
+</code></pre></div><h3 id="conda--cudatoolkit--cudnn--pytorch">conda &amp; cudatoolkit &amp; cudnn &amp; pytorch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#conda</span>
+curl -L -O <span style="color:#e6db74">&#34;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-</span><span style="color:#66d9ef">$(</span>uname<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">.sh&#34;</span>
+bash Mambaforge-<span style="color:#66d9ef">$(</span>uname<span style="color:#66d9ef">)</span>-<span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span>.sh
+<span style="color:#75715e">#cudatoolkit</span>
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
 sudo dpkg -i cuda-keyring_1.0-1_all.deb
 sudo apt-get update
