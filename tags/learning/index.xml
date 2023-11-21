@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>learning on 352 Learning Hub</title>
+    <title>learning on Su&#39;s Playground</title>
     <link>https://talsulin.github.io/tags/learning/</link>
-    <description>Recent content in learning on 352 Learning Hub</description>
+    <description>Recent content in learning on Su&#39;s Playground</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Mar 2023 13:00:00 -0600</lastBuildDate><atom:link href="https://talsulin.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2023 13:00:00 -0600</lastBuildDate>
+    <atom:link href="https://talsulin.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>terminal command</title>
+      <title>Terminal Command</title>
       <link>https://talsulin.github.io/macos-command/</link>
       <pubDate>Thu, 16 Mar 2023 13:00:00 -0600</pubDate>
-      
       <guid>https://talsulin.github.io/macos-command/</guid>
       <description>WSL&amp;amp;Clash create ~/.proxy file touch ~/.proxy adding codes in ~/.proxy file #!/bin/bash hostip=$(cat /etc/resolv.conf |grep -oP &amp;#39;(?&amp;lt;=nameserver\ ).*&amp;#39;) export https_proxy=&amp;#34;http://${hostip}:7890&amp;#34; export http_proxy=&amp;#34;http://${hostip}:7890&amp;#34; export all_proxy=&amp;#34;socks5://${hostip}:7890&amp;#34; edit .zshrc or .bashrc file source ~/.proxy conda &amp;amp; cudatoolkit &amp;amp; cudnn &amp;amp; pytorch #conda curl -L -O &amp;#34;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh&amp;#34; bash Mambaforge-$(uname)-$(uname -m).sh #cudatoolkit wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb sudo dpkg -i cuda-keyring_1.0-1_all.deb sudo apt-get update sudo apt-get -y install cuda #cudnn sudo apt install nvidia-cudnn #pytorch conda install pytorch torchvision torchaudio pytorch-cuda=11.</description>
     </item>
-    
     <item>
       <title>Table of contents for dissertations </title>
       <link>https://talsulin.github.io/table-of-contents-for-dissertations/</link>
       <pubDate>Mon, 13 Mar 2023 13:00:00 -0600</pubDate>
-      
       <guid>https://talsulin.github.io/table-of-contents-for-dissertations/</guid>
       <description>基于深度学习的蓝牙5的AoA估计方法及应用研究 目录 第一章 绪论 研究背景及意义 AoA角度估计现状 基于非蓝牙的方法 基于蓝牙的方法 研究内容及贡献 论文组织结构 done第二章 基于蓝牙的AoA角度估计 相关工作 蓝牙AoA工作原理 典型蓝牙的AoA的角度估计方法 理想模型 波束成形方法 基于子空间的方法 第三章 基于深度学习的蓝牙的AoA的角度估计算方法 数据预处理 传统AoA算法 基于神经网络模型深度学习的AoA估计方法 writing第四章 实验验证与分析 数据采集 实验设置 实验场景 软硬件环境 实验设置 数据采集 硬件设置 蓝牙信号采集 实验验证 传统方法 深度学习方法 性能分析 第五章 角度蓝牙AoA估计系统的设计与实现 系统需求分析 系统开发环境及相关技术 系统开发环境及相关技术 系统需求分析 系统架构设计 系统测试 系统功能实现 第六章 总结与展望 总结 展望 </description>
     </item>
-    
   </channel>
 </rss>
